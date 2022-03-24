@@ -1,0 +1,22 @@
+body {
+	background-color: #232323;
+    color: #bbb;
+}
+
+a {
+    color: #aaa;
+}
+
+a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.qrCodeBox {
+    display: block;
+}
+
+.footer {
+    display: block;
+    color: #aaa;
+}

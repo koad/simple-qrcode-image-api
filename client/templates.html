@@ -1,0 +1,53 @@
+<head>
+  <title>qr code generator</title>
+</head>
+
+<body>
+  	{{> yeild}}
+</body>
+
+<template name="app">
+	<span id="codeBox" class="qrCodeBox" align="middle">
+		{{>qrcode text=url size=size render="table" fill="#343434" background="#cacaca"}}
+	</span>
+	{{> footer}}
+</template>
+
+<template name="welcome">
+
+	<center>
+		<h2>koad's simple qr image generator</h2>
+		<span>
+
+			<br><br>
+
+			<span>To get an image, send to the `/image/:content` endpoint, and attach the file extention of the type of file you want in return.<br> example: https://qr.koad.sh/image/hello-world.png</span>
+
+			<br><br>
+
+			<h3>can get a file: `pdf`, `svg`, `png` or `eps`</h3>
+			<span><a href="/image/hello-world.pdf">/image/hello-world.pdf</a></span><br>
+			<span><a href="/image/hello-world.svg">/image/hello-world.svg</a></span><br>
+			<span><a href="/image/hello-world.png">/image/hello-world.png</a></span><br>
+			<span><a href="/image/hello-world.eps">/image/hello-world.eps</a></span><br>
+			
+			<br>
+
+			<h3>can render in the browser</h3>
+			<a href="/hello-world">/hello-world</a><br>
+			<a href="/i/a">/i/a</a><br>
+
+		</span>
+
+	</center>
+	{{> footer}}
+</template>
+
+<template name="footer">
+	<span id="codeBox" class="qrCodeBox" align="middle">
+	<p class="footer" align="middle">
+		designed by <a href="https://github.com/koad">koad</a>
+		 <br> <br>
+		<a href="https://docs.koad.sh/reference/repos/simple-qrcode-image-api">read the docs</a> | <a href="https://github.com/koad/simple-qrcode-image-api">view the source</a>
+	</p>
+</template>
