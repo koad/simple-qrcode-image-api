@@ -1,15 +1,36 @@
 <head>
-  <title>qr code generator</title>
+  <title>koad/simple-qrcode-image-api</title>
 </head>
-
+<!-- 
 <body>
-  	{{> yeild}}
-</body>
+  	{{> yield}}
+</body> -->
 
 <template name="app">
-	<span id="codeBox" class="qrCodeBox" align="middle">
-		{{>qrcode text=url size=size render="table" fill="#343434" background="#cacaca"}}
+	{{#if url}}
+
+	<span id="codeBox" class="qrCodeBox" style="width: {{size}}px; height: {{size}}px">
+		{{>qrcode text=url size=size render="table" fill="#222" background="#ACBAC7"}}
 	</span>
+		<center>
+			<pre>{{url}}</pre>
+			<hr>
+			<span>
+				Download or share as an image: 
+				<span><a href="/image/{{url}}.pdf">.pdf</a>, </span>
+				<span><a href="/image/{{url}}.svg">.svg</a>, </span>
+				<span><a href="/image/{{url}}.png">.png</a>, </span>
+				<span><a href="/image/{{url}}.eps">.eps</a></span>
+			</span>
+		</center>
+
+
+	{{else}}
+		<center>
+				<span>error: something went wrong, likely a bug.</span>
+		</center>
+	{{/if}}
+
 	{{> footer}}
 </template>
 
@@ -24,7 +45,7 @@
 
 		<br><br>
 
-		<h3>can get a file: `pdf`, `svg`, `png` or `eps`</h3>
+		<h3>get a file: `pdf`, `svg`, `png` or `eps`</h3>
 		<span><a href="/image/hello-world.pdf">/image/hello-world.pdf</a></span><br>
 		<span><a href="/image/hello-world.svg">/image/hello-world.svg</a></span><br>
 		<span><a href="/image/hello-world.png">/image/hello-world.png</a></span><br>
@@ -32,20 +53,16 @@
 		
 		<br>
 
-		<h3>can render in the browser</h3>
+		<h3>render a qrcode in a browser window</h3>
 		<a href="/hello-world">/hello-world</a><br>
-		<a href="/i/a">/i/a</a><br>
+		<a href="/CKyXmPGmjrAMY5uK46koHMVnkPCUsFqUkB">/CKyXmPGmjrAMY5uK46koHMVnkPCUsFqUkB</a><br>
 
 	</center>
 	{{> footer}}
 </template>
 
 <template name="footer">
-	<span id="codeBox" class="qrCodeBox" align="middle">
 		<p class="footer" align="middle">
-			designed by <a href="https://github.com/koad">koad</a>
-			 <br> <br>
 			<a href="https://docs.koad.sh/repo/simple-qrcode-image-api">read the docs</a> | <a href="https://github.com/koad/simple-qrcode-image-api">view the source</a>
 		</p>
-	</span>
 </template>

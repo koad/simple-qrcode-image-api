@@ -1,22 +1,38 @@
 body {
-	background-color: #232323;
-    color: #bbb;
+	background-color: #22272E;
+    color: #ACBAC7;
 }
 
 a {
-    color: #aaa;
+    color: #ccc;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #ccc;
+    color: #EEEEEE;
     text-decoration: underline;
 }
 
 .qrCodeBox {
     display: block;
+    padding: auto;
+    border: 1vw solid;
+    margin: auto;
+}
+
+.qrcode{
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .footer {
     display: block;
-    color: #aaa;
+    color: #ACBAC7;
+}
+
+hr{
+    border:  1px solid black;
 }
