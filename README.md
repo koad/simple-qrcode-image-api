@@ -21,3 +21,9 @@ since this app doesn't save any data, tell meteor not to connect to mongodb.
 # Need to at least specify MONGO_URL in production.
 export MONGO_URL=false
 ```
+
+
+---
+
+The word 'QR Code' is registered trademark of [DENSO WAVE INCORPORATED](http://www.denso-wave.com/qrcode/faqpatent-e.html)
+[ref://kazuhikoarase/qrcode-generator](https://kazuhikoarase.github.io/qrcode-generator/js/demo/)
