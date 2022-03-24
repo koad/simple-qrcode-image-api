@@ -26,4 +26,4 @@ Router.route('/image/:_content', function () {
 	// Pipe the file contents to the response
 	this.response.end(qrData);
 	
-});
+}, { where: 'server' });
