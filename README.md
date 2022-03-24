@@ -1,5 +1,7 @@
 # koad/simple-qrcode-image-api
 
+[![Matrix](https://img.shields.io/matrix/simple-qrcode-image:koad.sh?label=simple-qrcode-image:koad.sh&logo=matrix&server_fqdn=matrix.koad.sh)](https://matrix.to/#/#simple-qrcode-image-api:koad.sh)
+
 ## `QR Code Generator` using ``Meteor``
 ---
 
